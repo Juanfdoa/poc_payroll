@@ -1,4 +1,4 @@
-# POC: Procesamiento Automatizado de Horas Extras 🚀
+# POC 🚀
 
 Este proyecto es una **Prueba de Concepto (POC)** diseñada para resolver las inconsistencias y deficiencias de los sistemas legacy en el procesamiento de novedades de nómina. El sistema automatiza la recepción, validación y limpieza de registros de horas extras provenientes de archivos CSV.
 
@@ -22,7 +22,7 @@ Se implementó una **Arquitectura en Capas** para asegurar la separación de res
 
 *   **API Layer:** Exposición de endpoints REST, manejo de peticiones HTTP y validaciones de esquema.
 *   **Core Layer (Application & Domain):** Contiene la lógica de negocio, servicios de validación y el orquestador del procesamiento.
-*   **Infrastructure Layer:** Gestión de la persistencia en base de datos (PostgreSQL/SQL Server) y acceso a datos.
+*   **Infrastructure Layer:** Gestión de la persistencia en base de datos (PostgreSQL) y acceso a datos.
 
 ---
 
@@ -31,7 +31,6 @@ Se implementó una **Arquitectura en Capas** para asegurar la separación de res
 *   **.NET 8 / C#**
 *   **Entity Framework Core**
 *   **PostgreSQL** (Base de datos principal)
-*   **LINQ** para filtrado y transformación de datos eficiente.
 *   **Hashing (SHA256)** para la validación de integridad y duplicidad de archivos.
 
 ---
@@ -60,30 +59,6 @@ Este POC fue diseñado con una mentalidad **Cloud-Ready** y **Enterprise-Level**
 *   **Batch Insert:** Optimización de inserts en base de datos para manejar cientos de miles de registros.
 *   **Multi-tenancy:** Capacidad técnica para aislar datos por cliente o empresa.
 *   **Cloud Persistence:** Adaptabilidad para usar Azure Blob Storage o AWS S3 para el almacenamiento físico de archivos.
-
----
-
-## ⚙️ Configuración e Instalación
-
-1.  **Clonar el repositorio:**
-    ```bash
-    git clone [https://github.com/tu-usuario/nombre-del-repo.git](https://github.com/tu-usuario/nombre-del-repo.git)
-    ```
-2.  **Configurar la base de datos:**
-    Actualiza la cadena de conexión en el archivo `appsettings.json` de la capa API.
-3.  **Ejecutar Migraciones:**
-    ```bash
-    dotnet ef database update
-    ```
-4.  **Iniciar la aplicación:**
-    ```bash
-    dotnet run --project Layer.Api
-    ```
-
----
-
-## 🤖 Uso de IA
-Este proyecto integró herramientas de inteligencia artificial para acelerar la generación de código base y esquemas de validación. Se realizó una **revisión, ajuste y validación manual** exhaustiva para garantizar que la lógica de negocio, la seguridad y las buenas prácticas de arquitectura se cumplieran rigurosamente.
 
 ---
 
